@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tressure Hunt Play</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/modal.css">
+    <link rel="stylesheet" href="style/modal2.css">
+    <link rel="icon" href="images/pumpkin.png">
+</head>
+
+<body>
+
+    <div class="navbar" id="navbar">
+        <h2>Welcome to the tressure hunt</h2>
+        <div class="buttons">
+            <button onclick="howToPlay()">Welcome, <span id="playuser"></span></button>
+            <button><img src="images/pumpkin.png" height="15px" alt="pumpkin"> Current Candies: <span id="candies">0</span></button>
+        </div>
+    </div>
+
+    <div class="main-content" id="mainContent">
+        <img src="https://content.screencast.com/users/fg-a/folders/halloween/media/62f91cd8-44ab-447b-900f-1ef3085d7808/skeleton-cool-b.gif" alt="Walking skeleton" />
+        <h3>Walk to hunt candies</h3>
+
+        <div class="locationBox" id="locationBox">
+            <h3>
+                Current Coordinates
+            </h3>
+            <p>Lattitude : <span id="lati">Loading....</span></p>
+            <p>Longitude : <span id="longi">Loading....</span></p>
+        </div>
+
+        <div class="correctLocation" id="correctLocation">
+            <h3>
+                you got the currect location
+            </h3>
+
+            <button class="hunt" onclick="hunt()">Hunt Candy</button>
+        </div>
+    </div>
+
+    <!-- Modal for user entry -->
+
+    <section class="modal">
+        <div>
+            <h3 align="center">Select your Avtar</h3>
+            <div class="flex">
+                <label>
+                    <input type="radio" name="test" value="male" id="avtar1">
+                    <img id="avtar1" src="https://cdn3d.iconscout.com/3d/premium/thumb/man-avatar-6299539-5187871.png" alt="avtar">
+                </label>    
+                <label>
+                    <input type="radio" name="test" value="female" id="avtar2">
+                    <img id="avtar2" src="https://cdn3d.iconscout.com/3d/premium/thumb/women-presenter-avatar-6299536-5187868.png" alt="avtar">
+                </label>
+                
+                
+            </div>
+        </div>
+
+        <input type="text" id="stname" name="stname" placeholder="Enter your awesome name" required autofocus />
+        <button class="btn" onclick="startGame()">Start Game</button>
+    </section>
+    
+    
+    <section class="modal2 hidekaro">
+        <div>
+            <h3 align="center">Answer this question to hunt candy</h3>
+        </div>
+        <div class="questions">
+            <h4 id="daques">this is the question</h4>
+            <div class="options" id="options">
+                <button id="option1">option1</button>
+                <button id="option2">option2</button> <br>
+                <button id="option3">option3</button>
+                <button id="option4">option4</button>
+            </div>
+        </div>
+    </section>
+    
+    <div class="finaloutput">
+        <h2 id="finalscoreshow"></h2>
+    </div>
+
+    <div class="overlay"></div>
+    <div class="overlay2 hidekaro"></div>
+
+
+
+    <script src="script/script.js"></script>
+    <script src="script/modal.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body></html>
